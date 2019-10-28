@@ -7,5 +7,5 @@ https://help.github.com/en/github/building-a-strong-community/creating-a-default
 ## Copyright and license
 
 Code and documentation copyright 2019 [Geert Eltink](https://www.elt.ink/). 
-Code released under the [MIT License](https://github.com/iswai/devops/blob/master/LICENSE.md).
+Code released under the [MIT License](https://github.com/iswai/.github/blob/master/LICENSE.md).
 Docs released under [Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
