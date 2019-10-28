@@ -1,4 +1,4 @@
-# Contributing to ISWAI
+# Contributing
 
 Looking to contribute something to a ISWAI project? **Here's how you can help.**
 
