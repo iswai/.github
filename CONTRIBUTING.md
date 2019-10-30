@@ -13,7 +13,7 @@ patches and features.
 ## Code of Conduct
 
 Help us keep ISWAI open and inclusive. Please read and follow our
-[Code of Conduct](../CODE_OF_CONDUCT.md).
+[Code of Conduct](https://github.com/iswai/.github/blob/master/CODE_OF_CONDUCT.md).
 
 ## Using the issue tracker
 
