@@ -66,7 +66,7 @@ implementing features, refactoring code), otherwise you risk spending a lot of
 time working on something that the project's developers might not want to merge
 into the project.
 
-Please adhere to the [coding guidelines](#code-guidelines) used throughout the
+Please adhere to the [coding rules](#coding-rules) used throughout the
 project (indentation, accurate comments, etc.) and any other requirements
 (such as test coverage).
 
@@ -91,7 +91,8 @@ included in the project:
    git checkout master
    git pull upstream master
    git rebase upstream/master
-   git push origin master:master # Optionally to update your fork
+   # And optionally, to update your fork
+   git push origin master:master
    ```
 
 3. Create a new topic branch (off the main project development branch) to
@@ -127,6 +128,16 @@ license your work under the terms of the [MIT License](../LICENSE.md) (if it
 includes code changes) and under the terms of the
 [Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 (if it includes documentation changes).
+
+## Coding Rules
+
+To ensure consistency throughout the source code, keep these rules in mind as you are working:
+
+- All features or bug fixes must be tested by one or more unit-tests.
+- We follow the [Zend Coding Standard](https://github.com/zendframework/zend-coding-standard) for PHP,
+  the [airbnb base standard](https://github.com/airbnb/javascript) for JavaScript
+  and the [Code Guide](https://codeguide.co/) for [HTML](https://codeguide.co/#html) 
+  and [CSS](https://codeguide.co/#css).
 
 ## Commit Message Format
 
@@ -180,10 +191,3 @@ Must be one of the following:
 * **refactor**: A code change that neither fixes a bug nor adds a feature
 * **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
 * **test**: Adding missing tests or correcting existing tests
-
-## Code guidelines
-
-- [HTML](https://codeguide.co/#html)
-- [CSS](https://codeguide.co/#css)
-- JS
-- [PHP](https://github.com/zendframework/zend-coding-standard)
