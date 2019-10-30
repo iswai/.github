@@ -10,9 +10,14 @@ the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue or assessing
 patches and features.
 
+## Code of Conduct
+
+Help us keep ISWAI open and inclusive. Please read and follow our
+[Code of Conduct](../CODE_OF_CONDUCT.md).
+
 ## Using the issue tracker
 
-The issue tracker is the preferred channel for [bug reports](#bug-reports), 
+The issue tracker is the preferred channel for [bug reports](#bug-reports),
 [features requests](#feature-requests) and [submitting pull requests](#pull-requests),
 but please respect the following restrictions:
 
@@ -39,7 +44,7 @@ Guidelines for bug reports:
 2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
    latest `master` or development branch in the repository.
 
-3. **Isolate the problem** &mdash; ideally create a reduced test case to 
+3. **Isolate the problem** &mdash; ideally create a reduced test case to
    demonstrate the bug.
 
 ## Feature requests
@@ -86,7 +91,7 @@ included in the project:
    git checkout master
    git pull upstream master
    git rebase upstream/master
-   git push origin master:master # To update your fork
+   git push origin master:master # Optionally to update your fork
    ```
 
 3. Create a new topic branch (off the main project development branch) to
@@ -96,8 +101,8 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Commit your changes in logical chunks. Please adhere to these [git commit
-   message guidelines](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+4. Commit your changes in logical chunks. Please adhere to the
+   [conventional commits specification](#commit-message-format)
    or your code is unlikely be merged into the main project. Use Git's
    [interactive rebase](https://help.github.com/articles/about-git-rebase/)
    feature to tidy up your commits before making them public.
@@ -122,6 +127,59 @@ license your work under the terms of the [MIT License](../LICENSE.md) (if it
 includes code changes) and under the terms of the
 [Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 (if it includes documentation changes).
+
+## Commit Message Format
+
+Each commit message consists of a **header**, a **body** and a **footer**.
+The header has a special format that includes a **type**, a **scope** and
+a **subject**:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+The **header** is mandatory and the **scope** of the header is optional.
+
+The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+
+Samples: (even more [samples](https://github.com/conventional-commits/conventionalcommits.org/commits/master))
+
+```
+docs(changelog): update changelog to 1.0.0-alpha.1
+```
+```
+fix: need to depend on latest rxjs and zone.js
+
+The version in our package.json gets copied to the one we publish, and users
+need the latest of these.
+
+closes #1
+```
+
+### Revert
+
+If the commit reverts a previous commit, it should begin with `revert: `,
+followed by the header of the reverted commit. In the body it should say:
+`This reverts commit <hash>.`, where the hash is the SHA of the commit
+being reverted.
+
+### Type
+
+Must be one of the following:
+
+* **build**: Changes that affect the build system or external dependencies (example scopes: composer, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: GitHub Actions, Circle, Travis)
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **test**: Adding missing tests or correcting existing tests
 
 ## Code guidelines
 
