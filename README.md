@@ -6,7 +6,7 @@ https://help.github.com/en/github/building-a-strong-community/creating-a-default
 
 ## Contributing
 
-BEFORE you start work on a feature or fix, please read & follow the
+***BEFORE you start work on a feature or fix***, please read & follow the
 [contributing guidelines](https://github.com/iswai/.github/blob/master/CONTRIBUTING.md#contributing)
 to help avoid any wasted or duplicate effort.
 
