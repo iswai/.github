@@ -1,6 +1,6 @@
 # Contributing
 
-Looking to contribute something to a ISWAI project? **Here's how you can help.**
+Looking to contribute something? **Here's how you can help.**
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -12,8 +12,8 @@ patches and features.
 
 ## Code of Conduct
 
-Help us keep ISWAI open and inclusive. Please read and follow our
-[Code of Conduct](https://github.com/iswai/.github/blob/master/CODE_OF_CONDUCT.md).
+Help us keep this community open and inclusive. Please read and follow our
+[Code of Conduct](https://github.com/xtreamwayz/.github/blob/master/CODE_OF_CONDUCT.md).
 
 ## Using the issue tracker
 
@@ -82,7 +82,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd <project>
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/iswai/<project>.git
+   git remote add upstream https://github.com/xtreamwayz/<project>.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -136,7 +136,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 - All features or bug fixes must be tested by one or more unit-tests.
 - We follow the [Zend Coding Standard](https://github.com/zendframework/zend-coding-standard) for PHP,
   the [airbnb base standard](https://github.com/airbnb/javascript) for JavaScript
-  and the [Code Guide](https://codeguide.co/) for [HTML](https://codeguide.co/#html) 
+  and the [Code Guide](https://codeguide.co/) for [HTML](https://codeguide.co/#html)
   and [CSS](https://codeguide.co/#css).
 
 ## Commit Message Format
