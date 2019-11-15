@@ -150,7 +150,7 @@ That's it!
 - Delete the local branch:
 
   ```bash
-  git branch -D my-fix-branch
+  git branch -D <patch-branch-name>
   ```
 
 - Update your master with the latest upstream version:
