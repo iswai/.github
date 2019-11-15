@@ -35,16 +35,16 @@ Good bug reports are extremely helpful, so thanks!
 
 Guidelines for bug reports:
 
-0. **Validate you code** to ensure your problem isn't caused by a simple error
+1. **Validate you code** to ensure your problem isn't caused by a simple error
    in your own code.
 
-1. **Use the GitHub issue search** &mdash; check if the issue has already been
+2. **Use the GitHub issue search** &mdash; check if the issue has already been
    reported.
 
-2. **Check if the issue has been fixed** &mdash; try to reproduce it using the
+3. **Check if the issue has been fixed** &mdash; try to reproduce it using the
    latest `master` or development branch in the repository.
 
-3. **Isolate the problem** &mdash; ideally create a reduced test case to
+4. **Isolate the problem** &mdash; ideally create a reduced test case to
    demonstrate the bug.
 
 ## Feature requests
@@ -85,12 +85,11 @@ included in the project:
    git remote add upstream https://github.com/xtreamwayz/<project>.git
    ```
 
-2. If you cloned a while ago, get the latest changes from upstream:
+2. Get the latest changes from upstream:
 
    ```bash
-   git checkout master
-   git pull upstream master
-   git rebase upstream/master
+   git checkout master -f
+   git pull --ff upstream master
    # And optionally, to update your fork
    git push origin master:master
    ```
@@ -99,7 +98,7 @@ included in the project:
    contain your feature, change, or fix:
 
    ```bash
-   git checkout -b <topic-branch-name>
+   git checkout -b <patch-branch-name>
    ```
 
 4. Commit your changes in logical chunks. Please adhere to the
@@ -108,20 +107,57 @@ included in the project:
    [interactive rebase](https://help.github.com/articles/about-git-rebase/)
    feature to tidy up your commits before making them public.
 
-5. Locally merge (or rebase) the upstream branch into your topic branch:
-
    ```bash
-   git pull [--rebase] upstream master
+   git commit -a
    ```
 
-6. Push your topic branch up to your fork:
+6. Push your branch up to your fork:
 
    ```bash
-   git push origin <topic-branch-name>
+   git push origin <patch-branch-name>
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/)
     with a clear title and description against the `master` branch.
+
+8. If changes are suggested then:
+
+   - Make the required updates.
+   - Re-run the test suites to ensure tests are still passing.
+   - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
+
+   ```bash
+   git rebase master -i
+   git push -f
+   ```
+
+That's it!
+
+**After your pull request is merged**
+
+- Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:
+
+  ```bash
+  git push origin --delete <patch-branch-name>
+  ```
+
+- Check out the master branch:
+
+  ```bash
+  git checkout master -f
+  ```
+
+- Delete the local branch:
+
+  ```bash
+  git branch -D my-fix-branch
+  ```
+
+- Update your master with the latest upstream version:
+
+  ```bash
+  git pull --ff upstream master
+  ```
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to
 license your work under the terms of the [MIT License](../LICENSE.md) (if it
