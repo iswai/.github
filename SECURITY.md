@@ -7,12 +7,6 @@ If you believe you have found a security vulnerability in any owned repository, 
 
 ## Reporting Security Issues
 
-**Please do not report security vulnerabilities through public GitHub issues.**
-
-Instead, please report them to via the Security tab, located in the GiutHub repository page.
-
-You should receive a response within 14 days. If for some reason you do not, please follow up via email to ensure we received your original message.
-
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
   * Version containing the vulnerability
@@ -24,6 +18,8 @@ Please include the requested information listed below (as much as you can provid
   * Priority and Severity of the issue. Severity can be determined by Common Vulnerability Scoring System (CVSS)
 
 This information will help us triage your report more quickly.
+
+You should receive a response within 14 days. If for some reason you do not, please follow up via email to ensure we received your original message.
 
 
 ## Preferred Languages
