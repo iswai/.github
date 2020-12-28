@@ -1,0 +1,97 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: false
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: build
+    color: 90CAF9
+    description: "Changes that affect the build system or external dependencies: e.g. composer, npm, yarn"
+
+  - name: ci
+    color: 90CAF9
+    description: "Changes to our CI configuration files and scripts: e.g. GitHub, Travis, Circle"
+
+  - name: docs
+    color: 64B5F6
+    description: "Documentation only changes"
+
+  - name: feat
+    color: 42A5F5
+    description: "A new feature"
+
+  - name: fix
+    color: 2196F3
+    description: "A bug fix"
+
+  - name: perf
+    color: 1E88E5
+    description: "A code change that improves performance"
+
+  - name: refactor
+    color: 1976D2
+    description: "A code change that neither fixes a bug nor adds a feature"
+
+  - name: style
+    color: 1565C0
+    description: "Changes that do not affect the meaning of the code: e.g. white-space, formatting, etc"
+
+  - name: test
+    color: 0D47A1
+    description: "Adding missing tests or correcting existing tests"
+
+  - name: "type: documentation"
+    color: CE93D8
+    description: "Improvements or additions to documentation"
+
+  - name: "type: bug"
+    color: 880E4F
+    description: "Something isn't working"
+
+  - name: "type: feature"
+    color: 4A148C
+    description: "New feature or request"
+
+  - name: "type: question"
+    color: 9C27B0
+    description: "Further information is requested"
+
+  - name: "good first issue"
+    color: 1B5E20
+    description: "Good for newcomers"
+
+  - name: "help wanted"
+    color: 1B5E20
+    description: "Extra attention is needed"
+
+  - name: "status: needs clarification"
+    color: FFA726
+    description: "This issue needs additional clarification from the reporter before the team can investigate"
+
+  - name: "status: needs reproduction"
+    color: FFA726
+    description: "This issue needs a reproduction in order for the team to investigate further"
+
+  - name: "status: needs tests"
+    color: FFA726
+    description: "This issue needs additional clarification from the reporter before the team can investigate"
+
+  - name: "status: duplicate"
+    color: 90A4AE
+    description: "This issue or pull request already exists"
+
+  - name: "status: invalid"
+    color: 90A4AE
+    description: "This doesn't seem right"
+
+  - name: "status: wontfix"
+    color: 90A4AE
+    description: "This will not be worked on"
