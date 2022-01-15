@@ -1,0 +1,53 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default configuration for repositories in the Genetic Consolidated organisation",
+  "extends": [
+    ":enableRenovate",
+    ":semanticCommits",
+    ":ignoreModulesAndTests",
+    ":automergeDisabled",
+    ":automergeBranch",
+    ":prNotPending",
+    ":rebaseStalePrs",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":enableVulnerabilityAlerts",
+    ":timezone(UTC)",
+    ":label(dependencies)",
+    "group:allNonMajor",
+    "schedule:daily"
+  ],
+  "enabledManagers": [
+    "npm",
+    "composer",
+    "github-actions"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      ":automergeAll"
+    ]
+  },
+  "platformAutomerge": true,
+  "rangeStrategy": "widen",
+  "rollbackPrs": true,
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    }
+  ]
+}
