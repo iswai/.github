@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Default configuration for repositories in the Genetic Consolidated organisation",
+  "description": "Default renovate configuration",
   "extends": [
     "config:base",
     "group:allNonMajor",
@@ -42,13 +42,6 @@
         "minor"
       ],
       "enabled": false
-    },
-    {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true
     }
   ]
 }
