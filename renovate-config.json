@@ -4,28 +4,36 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
-    "schedule:nonOfficeHours",
+    "schedule:daily",
+    ":disableDependencyDashboard",
     ":semanticCommits",
     ":label(dependencies)",
     ":timezone(UTC)",
     ":enableVulnerabilityAlerts",
-    ":ignoreModulesAndTests",
     ":automergeMinor",
-    ":automergeBranch",
+    ":automergePr",
     ":prNotPending",
     ":rebaseStalePrs",
     ":separateMajorReleases",
-    ":combinePatchMinorReleases",
-    ":maintainLockFilesWeekly"
+    ":combinePatchMinorReleases"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": [
+      "schedule:daily"
+    ]
+  },
   "enabledManagers": [
     "npm",
     "composer",
     "github-actions"
   ],
   "platformAutomerge": true,
-  "rangeStrategy": "widen",
   "rollbackPrs": true,
+  "rangeStrategy": "widen",
+  "constraints": {
+    "php": "^7.4"
+  },
   "packageRules": [
     {
       "matchDepTypes": [
