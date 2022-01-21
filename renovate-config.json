@@ -32,9 +32,6 @@
   "platformAutomerge": true,
   "rollbackPrs": true,
   "rangeStrategy": "widen",
-  "constraints": {
-    "php": "^7.4"
-  },
   "packageRules": [
     {
       "matchDepTypes": [
