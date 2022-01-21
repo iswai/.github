@@ -26,6 +26,8 @@
   "enabledManagers": [
     "npm",
     "composer",
+    "docker-compose",
+    "dockerfile",
     "github-actions"
   ],
   "platformAutomerge": true,
