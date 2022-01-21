@@ -5,7 +5,6 @@
     "config:base",
     "group:allNonMajor",
     "schedule:daily",
-    ":disableDependencyDashboard",
     ":semanticCommits",
     ":label(dependencies)",
     ":timezone(UTC)",
