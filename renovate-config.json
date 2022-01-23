@@ -4,41 +4,37 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
-    "schedule:daily",
-    ":semanticCommits",
-    ":label(dependencies)",
-    ":timezone(UTC)",
-    ":enableVulnerabilityAlerts",
+    "schedule:nonOfficeHours",
     ":automergeMinor",
     ":automergePr",
+    ":automergeBranch",
+    ":combinePatchMinorReleases",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":label(dependencies)",
+    ":gitSignOff",
     ":prNotPending",
     ":rebaseStalePrs",
+    ":semanticCommits",
     ":separateMajorReleases",
-    ":combinePatchMinorReleases"
+    ":timezone(UTC)"
+  ],
+  "enabledManagers": [
+    "composer",
+    "docker-compose",
+    "dockerfile",
+    "github-actions",
+    "npm"
   ],
   "lockFileMaintenance": {
     "enabled": true,
     "extends": [
-      "schedule:daily"
+      "schedule:nonOfficeHours"
     ]
   },
-  "enabledManagers": [
-    "npm",
-    "composer",
-    "docker-compose",
-    "dockerfile",
-    "github-actions"
-  ],
-  "platformAutomerge": true,
+  "rangeStrategy": "replace",
   "rollbackPrs": true,
-  "rangeStrategy": "widen",
+  "platformAutomerge": true,
   "packageRules": [
-    {
-      "matchDepTypes": [
-        "require-dev"
-      ],
-      "rangeStrategy": "bump"
-    },
     {
       "matchManagers": [
         "github-actions"
@@ -48,6 +44,12 @@
         "minor"
       ],
       "enabled": false
+    },
+    {
+      "matchDepTypes": [
+        "peerDependencies"
+      ],
+      "rangeStrategy": "widen"
     }
   ]
 }
