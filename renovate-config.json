@@ -1,51 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Default renovate configuration",
   "extends": [
-    "config:base",
-    "group:allNonMajor",
-    "schedule:nonOfficeHours",
-    ":automergeMinor",
-    ":automergePr",
-    ":automergeBranch",
-    ":combinePatchMinorReleases",
-    ":enableVulnerabilityAlertsWithLabel(security)",
-    ":label(dependencies)",
-    ":gitSignOff",
-    ":prNotPending",
-    ":rebaseStalePrs",
-    ":semanticCommits",
-    ":separateMajorReleases",
-    ":timezone(UTC)"
+    "github>geerteltink/renovate-config"
   ],
-  "enabledManagers": [
-    "composer",
-    "docker-compose",
-    "dockerfile",
-    "github-actions",
-    "npm"
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "extends": [
-      "schedule:nonOfficeHours"
-    ]
-  },
-  "commitBodyTable": true,
   "rangeStrategy": "replace",
-  "rollbackPrs": true,
-  "platformAutomerge": true,
   "packageRules": [
-    {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ],
-      "enabled": false
-    },
     {
       "matchDepTypes": [
         "peerDependencies"
